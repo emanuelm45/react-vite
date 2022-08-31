@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+#input-fibonacci {
+    width: min(15rem, 50vw);
+    padding: .5rem;
+    border: 1px solid var(--color-black);
+    border-radius: 1rem;
+}
+
+.list-fibonacci {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+}

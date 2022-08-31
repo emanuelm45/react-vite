@@ -1,0 +1,52 @@
+h1 {
+    width: 25rem;
+}
+
+#input-add-to-do {
+    border-radius: 1rem;
+    padding: .5rem;
+    width: min(15rem, 50vw);
+    border: 1px solid var(--color-black);
+}
+
+.list-names {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.list-names li {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    align-items: center;
+    padding: .3rem .5rem;
+    background-color: var(--color-off-white);
+    border-radius: 1rem;
+    max-width: min(15rem, 50vw);
+    overflow: break-word;
+}
+
+.button-remove-to-do {
+    transition: all .3s;
+    cursor: initial;
+    padding: .3rem .6rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-weight: lighter;
+}
+
+.button-remove-to-do:hover {
+    background-color: var(--color-red);
+    color: var(--color-off-white);
+}
+
+@media(min-width: 700px) {
+    #input-add-to-do {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
