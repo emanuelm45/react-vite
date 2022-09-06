@@ -19,9 +19,10 @@
   --color-black: rgb(0, 0, 0);
   --color-black-hover: rgba(0, 0, 0, .5);
   --color-green: rgb(84, 139, 38);
-  --color-lightgreen: rgb(113, 172, 30);
+  --color-light-green: rgb(113, 172, 30);
   --color-off-white: rgb(237, 237, 237);
-  --color-red: rgb(228, 69, 69);
+  --color-red: rgb(255, 0, 0);
+  --color-light-red: rgb(225, 80, 80);
   --color-white: rgb(255, 255, 255);
 }
 

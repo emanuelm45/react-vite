@@ -1,21 +1,21 @@
 import { useState } from "react"
 import './FormAdress.css'
-import InputStates from "../../components/InputStates/InputStates"
-import InputCities from "../../components/InputCities/InputCities"
-import InputPostalCode from "../../components/InputPostalCode/InputPostalCode"
+import InputStates from "../../components/InputStates"
+import InputCities from "../../components/InputCities"
+import InputPostalCode from "../../components/InputPostalCode"
+import InputStreet from "../../components/InputStreet/InputStreet"
+import FormAdressContextProvider from "../../providers/FormAdressContext"
 
 export default function () {
-    const [uf, setUf] = useState("")
-
     return <>
-        <form className="container">
-            <InputStates setUf={setUf} />
-            <InputCities uf={uf} />
-
-            <span> ou </span>
-
-            <InputPostalCode />
-            <button className="btn-send" onClick={(ev) => ev.preventDefault()}>Enviar</button>
-        </form>
+        <FormAdressContextProvider>
+            <form className="container">
+                <InputStates />
+                <InputCities />
+                <InputStreet />
+                <InputPostalCode />
+                <button className="btn-send" onClick={(ev) => ev.preventDefault()}>Enviar</button>
+            </form>
+        </FormAdressContextProvider>
     </>
 }
