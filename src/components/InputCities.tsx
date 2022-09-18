@@ -2,14 +2,14 @@ import React, { useEffect, useLayoutEffect, useState } from "react"
 import { FormAdressContext } from "../providers/FormAdressContext"
 
 export default function () {
-    const [cities, setCities] = useState([])
+    const [listedCities, setListedCities] = useState([])
     const {uf, setUf, city, setCity} = React.useContext(FormAdressContext)        
 
     async function getCities() {
         if (!uf) return
         const requestCitites = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`)
         const cities = await requestCitites.json()
-        setCities(cities)
+        setListedCities(cities)
     }
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function () {
             : <div className="input-container">
                 <label htmlFor="select-cities">Selecione sua cidade</label>
                 <select id="select-cities" onChange={selectCity} value={city}>
-                    {cities.map(({ nome }, idx) => <option key={idx} value={nome}>{nome}</option>)}
+                    {listedCities.map(({ nome }, idx) => <option key={idx} value={nome}>{nome}</option>)}
                 </select>
             </div>
         }

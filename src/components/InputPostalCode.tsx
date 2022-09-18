@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { FormAdressContext } from "../providers/FormAdressContext"
 
 export default function () {
-    const {setUf, setCity, setStreet, postalCode, setPostalCode } = React.useContext(FormAdressContext)
+    const { setUf, setCity, setStreet, setPostalCode, setDistrict } = React.useContext(FormAdressContext)
     const [error, setError] = useState(false)
 
     const updatePostalCode = async (ev: React.KeyboardEvent<HTMLInputElement>) => {
@@ -23,7 +23,7 @@ export default function () {
         setUf(responseCode.uf)
         setCity(responseCode.localidade)
         setStreet(responseCode.logradouro)
-
+        setDistrict(responseCode.bairro)
     }
 
     const codeMask = (ev: React.KeyboardEvent<HTMLInputElement>) => {
@@ -32,7 +32,6 @@ export default function () {
     }
 
     return <>
-
         <div className="input-container">
             <label htmlFor="input-code">Insira seu CEP</label>
             <input type="text" placeholder="88888-888" maxLength={9} onKeyUp={

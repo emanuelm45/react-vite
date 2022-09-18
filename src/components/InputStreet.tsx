@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react"
-import { FormAdressContext } from "../../providers/FormAdressContext"
+import { FormAdressContext } from "../providers/FormAdressContext"
 
 export default function () {
     const {uf, setUf, setCity, city, street, setStreet} = React.useContext(FormAdressContext)
@@ -7,10 +7,10 @@ export default function () {
     const getStreets = async (ev: React.KeyboardEvent<HTMLInputElement>) => {
         const requestStreet = await fetch(`https://viacep.com.br/ws/${uf}/${city}/${ev.currentTarget.value}/json/`)
         const responseStreet = await requestStreet.json()
-        setStreets(responseStreet[1])
-        for(let street in streets) {
-            console.log(street)
-        }
+        setStreet(responseStreet[1])
+        // for(let street in streets) {
+        //     console.log(street)
+        // }
         // setUf(responseStreet.uf)    
         // console.log(responseStreet.localidade)    
     }

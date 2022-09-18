@@ -5,6 +5,7 @@ import TodoListContextProvider from './providers/ToDoListContext'
 import Fibonacci from './components/Fibonacci/Fibonacci'
 import AnagramChecker from './components/AnagramChecker/AnagramChecker'
 import FormAdress from './pages/FormAdress/FormAdress'
+import FormAdressContextProvider from './providers/FormAdressContext'
 
 export default function App() {
 
@@ -18,7 +19,9 @@ export default function App() {
         <Fibonacci /> */}
         {/* <AnagramChecker /> */}
       {/* </TodoListContextProvider> */}
-      <FormAdress />
+      <FormAdressContextProvider>
+        <FormAdress />
+      </FormAdressContextProvider>
     </div>
   </>
 }
