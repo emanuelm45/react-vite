@@ -1,0 +1,78 @@
+.App {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 220, 200, 1) 0%,
+    rgb(10, 60, 78) 100%
+  );
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+  padding: 1.6rem;
+  border-radius: 1.5rem;
+}
+
+.btn-send {
+  padding: min(1.5rem, 10vw);
+  background-color: var(--color-green);
+  color: var(--color-white);
+  transition: all 0.3s;
+  border-radius: 1rem;
+  font-size: min(1.4rem, 5vw);
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.btn-send:hover {
+  background-color: var(--color-light-green);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(50rem, 80vw);
+  font-size: min(1.6rem, 5vw);
+}
+
+.input-container select,
+.input-container input {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  font-size: inherit;
+  width: min(25rem, 60vw);
+}
+
+.input-container label {
+  text-align: center;
+  margin-right: 1rem;
+  user-select: none;
+  color: var(--color-white);
+}
+
+.error {
+  position: absolute;
+  top: 4rem;
+  color: var(--color-light-red);
+}
+
+@media (max-width: 700px) {
+  .input-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .input-container select,
+  .input-container input {
+    text-align: center;
+  }
+
+  .input-container label {
+    margin-right: 0;
+  }
+}

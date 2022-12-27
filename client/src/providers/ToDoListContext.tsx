@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 interface TTodoList {
   list: string[]
@@ -7,16 +7,17 @@ interface TTodoList {
 
 export const ToDoListContext = React.createContext({} as TTodoList)
 
-export default function TodoListContextProvider(props: React.PropsWithChildren) {
+export default function TodoListContextProvider(
+  props: React.PropsWithChildren
+) {
   const [list, setList] = useState(() => {
     const localData = localStorage.getItem("localData")
-    if (localData)
-      return JSON.parse(localData) as string[]
+    if (localData) return JSON.parse(localData) as string[]
     return ["Dunha", "Dirce"]
   })
 
   return (
-    <ToDoListContext.Provider value={{list, setList}}>
+    <ToDoListContext.Provider value={{ list, setList }}>
       {props.children}
     </ToDoListContext.Provider>
   )

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap");
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -17,7 +17,7 @@
   -webkit-text-size-adjust: 100%;
 
   --color-black: rgb(0, 0, 0);
-  --color-black-hover: rgba(0, 0, 0, .5);
+  --color-black-hover: rgba(0, 0, 0, 0.5);
   --color-green: rgb(84, 139, 38);
   --color-light-green: rgb(113, 172, 30);
   --color-off-white: rgb(237, 237, 237);
@@ -33,7 +33,7 @@
   outline: none;
   list-style: none;
   border: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
